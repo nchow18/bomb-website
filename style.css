@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 9999;
+    background-image: url("./assets/images/white-abstract.jpg");
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    background-attachment: fixed;
+    background-position: 80%;
+    position: -webkit-sticky;
+    justify-content: space-between;
+    height: 125px;
+}
+
+header h1 {
+    font-size: 50px;
+    text-shadow: 0 0 10px rgba(58, 57, 57, 0.5);
+    font-weight: bold;
+}
+
+/* header nav links - contains hover links that increase in size */
+
+header nav {
+    margin-top: 75px;
+    margin-right: 25px;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    font-weight: lighter;
+    font-size: 25px;
+    padding: 10px 25px 4.5px;
+    text-decoration: none;
+    color: black;
+    text-shadow: 0 0 10px rgba(55,55,55,0.5);
+}
+
+/* animate, slide from right to left */
+
+header nav ul li a:hover {
+    font-size: 35px;
+    transition: 0.5s;
+    border-bottom: 4px solid black;
+}
+
+header nav ul li a:hover head nav ul li a::after {
+    opacity: 1;
+}
+
+header nav ul li a::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+    opacity: 0;
+    color: white;
+}
+
+/*       BODY      */
+
+
+/* NATHANS "aboutme work contact" CONTAINER */
+
+.grid-about-me-container {
+    background: lightgray;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    background: rgb(224, 224, 224);
+    padding: 50px;
+    border: 2px solid black;
+}
+
+.grid-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.about-me.first-column {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 980px) {
+    header {
+        justify-content: center;
+        position: relative;
+    }
+
+    header h1 {
+        text-align: center;
+        width: 100%;
+    }
+
+    header nav {
+        margin-top: 10px
+    }
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 575px) {
+
+}
