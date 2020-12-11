@@ -17,12 +17,15 @@ header {
     position: -webkit-sticky;
     justify-content: space-between;
     height: 125px;
+    position: sticky;
 }
 
 header h1 {
     font-size: 50px;
-    text-shadow: 0 0 10px rgba(58, 57, 57, 0.5);
+    text-shadow: 0 0 10px rgba(219, 219, 219, 0.5);
     font-weight: bold;
+    padding: 30px;
+    color: black;
 }
 
 /* header nav links - contains hover links that increase in size */
@@ -47,7 +50,7 @@ header nav ul li {
 header nav ul li a {
     font-weight: lighter;
     font-size: 25px;
-    padding: 10px 25px 4.5px;
+    padding: 10px 25px 6px;
     text-decoration: none;
     color: black;
     text-shadow: 0 0 10px rgba(55,55,55,0.5);
@@ -57,53 +60,95 @@ header nav ul li a {
 
 header nav ul li a:hover {
     font-size: 35px;
-    transition: 0.5s;
+    transition: 0.3s;
     border-bottom: 4px solid black;
-}
-
-header nav ul li a:hover head nav ul li a::after {
-    opacity: 1;
-}
-
-header nav ul li a::after {
-    content: "";
-    height: 100%;
-    width: 100%;
-    font-size: 20px;
-    opacity: 0;
     color: white;
 }
 
-/*       BODY      */
+/* -------------------------------------- */
+/*               BODY                     */
+/* -------------------------------------- */
+
+body {
 
 
-/* NATHANS "aboutme work contact" CONTAINER */
-
-.grid-about-me-container {
-    background: lightgray;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr;
-    background: rgb(224, 224, 224);
-    padding: 50px;
-    border: 2px solid black;
 }
 
-.grid-wrapper {
+/* -------------------------------------- */
+/*             BODY CONTAINER             */
+/* -------------------------------------- */
+
+.spacer {
+    background-image: url("./assets/images/white-abstract.jpg");
+    background-size: cover;
+    background-position: center;
+    background-position: 80%;
+    background-attachment: fixed;
+    height: 200px;
+    z-index: 1;
+}
+
+.welcome-message {
+    text-align: right;
+    font-size: 50px;
     display: flex;
-    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 135px 15px 15px;
+}
+
+/* -------------------------------------- */
+/*             GRID CONTAINER             */
+/* -------------------------------------- */
+
+.body-grid-wrapper {
+    padding: 0px;
+    display: flex;
     justify-content: center;
 }
 
-.about-me.first-column {
-    grid-column: 1;
-    grid-row: 1;
+.body-grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: rgb(247, 247, 247);
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
+.grid-item {
+    padding: 20px;
+    margin-top: 50px;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    overflow: hidden;
+}
 
+.first {
+    grid-column: 1 /span 1;
+    font-size: 35px;
+    border-left: 3px solid black;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    text-align: center;
+    padding: 100px 20px 10px 5px;
+    font-weight: bold;
+    z-index: 10;
+}
 
-/* MEDIA QUERY */
+.second {
+    grid-column: 2 /span 4;
+    text-align: left;
+    padding: 10px 50px 10px 20px;
+    font-size: 20px;
+    z-index: 10;
+}
+
+/* -------------------------------------- */
+/*               MEDIA QUERY              */
+/* -------------------------------------- */
 
 @media screen and (max-width: 980px) {
     header {
@@ -114,16 +159,38 @@ header nav ul li a::after {
     header h1 {
         text-align: center;
         width: 100%;
+        padding-top: 5px;
+        padding-bottom: 1px;
     }
 
     header nav {
-        margin-top: 10px
+        margin-top: 1px
     }
 
-@media screen and (max-width: 768px) {
+    header {
+        position: sticky;
+    }
+}
 
+@media screen and (max-width: 768px) {
+    header nav {
+        margin-top: 5px;
+        text-align: center;
+    }
+
+    header nav ul li a {
+        padding: 5px 5px;
+    }
+
+    header {
+        position: sticky;
+    }
 }
 
 @media screen and (max-width: 575px) {
+    
+    header {
+    position: sticky;
+    }
 
 }
