@@ -65,6 +65,8 @@ header nav ul li a:hover {
     color: white;
 }
 
+
+
 /* -------------------------------------- */
 /*               BODY                     */
 /* -------------------------------------- */
@@ -101,50 +103,164 @@ body {
 /*             GRID CONTAINER             */
 /* -------------------------------------- */
 
-.body-grid-wrapper {
-    padding: 0px;
+.grid-wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-}
-
-.body-grid-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    background-color: rgb(247, 247, 247);
-    padding: 10px;
     width: 100%;
-    position: relative;
-    z-index: 1;
 }
 
-.grid-item {
-    padding: 20px;
-    margin-top: 50px;
-    position: relative;
-    z-index: 5;
-    display: flex;
-    overflow: hidden;
-}
-
-.first {
-    grid-column: 1 /span 1;
+.first-column {
     font-size: 35px;
-    border-left: 3px solid black;
     writing-mode: vertical-lr;
     transform: rotate(180deg);
-    text-align: center;
-    padding: 100px 20px 10px 5px;
     font-weight: bold;
-    z-index: 10;
+    border-left: 3px solid black;
+    padding: 20px;
+    margin: 20px;
 }
 
-.second {
-    grid-column: 2 /span 4;
-    text-align: left;
-    padding: 10px 50px 10px 20px;
+.second-column {
     font-size: 20px;
-    z-index: 10;
+    padding: 20px;
 }
+
+.grid-template {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: repreat(1, 1fr);
+    background: rgb(245, 245, 245);
+    width: 100%;
+    position: relative;
+}
+
+/*--------------------*/
+/*   ABOUT ME GRID    */
+/*--------------------*/
+
+.about-me-container h2 {
+    position: relative;
+    z-index: 10;
+    color: black;
+    font-size: 35px;
+}
+
+.about-details-container h3 {
+    position: relative;
+    z-index: 5;
+    color: black;
+    font-size: 20px;
+    left: 900px;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.about-details-container::after {
+    content: "";
+    height: 85%;
+    width: 80%;
+    background: rgb(248, 207, 214);
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: 1s;
+    margin: 20px 0 20px 0;
+}
+
+.about-me-grid:hover .about-details-container::after {
+    opacity: .6;
+}
+
+.about-me-grid:hover .about-details-container h3 {
+    left: 0;
+}
+
+/*--------------------*/
+/*   PROJECTS GRID    */
+/*--------------------*/
+
+.projects-container h2 {
+    position: relative;
+    z-index: 10;
+    color: black;
+    font-size: 35px;
+}
+
+.project-details-container h3 {
+    position: relative;
+    z-index: 5;
+    color: black;
+    font-size: 20px;
+    left: 900px;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.project-details-container::after {
+    content: "";
+    height: 90%;
+    width: 80%;
+    background: rgb(248, 207, 214);
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: 1s;
+    margin: 20px 0 20px 0;
+}
+
+.projects-grid:hover .project-details-container::after {
+    opacity: .6;
+}
+
+.projects-grid:hover .project-details-container h3 {
+    left: 0;
+}
+
+/*--------------------*/
+/*   CONTACTS GRID    */
+/*--------------------*/
+
+.contact-container h2 {
+    position: relative;
+    z-index: 10;
+    color: black;
+    font-size: 35px;
+}
+
+.contact-details-container h3 {
+    position: relative;
+    z-index: 5;
+    color: black;
+    font-size: 20px;
+    left: 900px;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.contact-details-container::after {
+    content: "";
+    height: 100%;
+    width: 80%;
+    background: rgb(248, 207, 214);
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: 1s;
+}
+
+.contact-grid:hover .contact-details-container::after {
+    opacity: .6;
+}
+
+.contact-grid:hover .contact-details-container h3 {
+    left: 0;
+}
+
+
+
 
 /* -------------------------------------- */
 /*               MEDIA QUERY              */
@@ -170,6 +286,11 @@ body {
     header {
         position: sticky;
     }
+
+    header nav ul li a:hover {
+        font-size: 25px;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -185,12 +306,21 @@ body {
     header {
         position: sticky;
     }
+
+    header nav ul li a:hover {
+        font-size: 25px;
+    }
+
 }
 
 @media screen and (max-width: 575px) {
     
     header {
     position: sticky;
+    }
+
+    header nav ul li a:hover {
+        font-size: 25px;
     }
 
 }
