@@ -33,18 +33,24 @@
 
 <body>
 
-<div class="spacer">
-    <div class="welcome-message">
-        <h1>Welcome and enjoy!</h1>
-    </div><!--welcome message-->
-</div><!--spacer-->
+<!-- WELCOME MESSAGE -->
 
-<div class="grid-wrapper">
+    <div class="spacer">
+        <div class="welcome-box">
+        </div>
+            <div class="welcome-text">
+                <h1>Welcome and enjoy!</h1>
+                </div>
+
+    </div><!--spacer-->
+
+    <div class="grid-wrapper">
     
     
 <!-- ABOUT ME -->
 
-        <section id="about-me" class="about-me-grid grid-template sticky-stop">
+        <section id="about-me" class="about-me-wrapper grid-template sticky-stop">
+            <div class="about-me-grid">
 
            <div class="about-me-container first-column transition-1">
                <h2>ABOUT ME</h2>
@@ -53,10 +59,10 @@
 <!--ABOUT ME : DETAILS -->
 
           <div class="about-details-container second-column transition-2">
-              <h3>MY INFO AND DETAILS HERE</h3>
+              <h3>My name is Nathan. I recently started the dive into coding, in the hopes of learning the back, front and full stack developing.  The journey so far has brought me with a few designed projects that will showcase my skills and abilities.  Please enjoy and have fun!</h3>
           </div>
-    
-        </section><!--about me grid-->
+            </div><!--about me grid-->
+        </section><!--about me wrapper-->
 
 <!-- PROJECTS -->
 
@@ -136,10 +142,11 @@
 
 <!-- CONTACT -->
 
-        <section id="contact" class="contact-grid grid-template sticky-stop">
-            <div class="contact-container first-column">
-                <h2>CONTACT</h2>
-            </div>
+        <section id="contact" class="contact-wrapper grid-template sticky-stop">
+            <div class="contact-section">
+                <div class="contact-container first-column">
+                    <h2>CONTACT</h2>
+                </div>
 
 <!-- CONTACT DETAILS -->
 
@@ -163,7 +170,7 @@
                 </nav>
                 </div><!-- contact info, store info -->
             </div><!--contact details container-->
-                
+        </div><!--contact section-->
         </section>
     </div><!--grid wrapper-->
 
