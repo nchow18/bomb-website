@@ -55,8 +55,8 @@ header nav ul li {
 header nav ul li a {
     font-weight: lighter;
     font-size: 25px;
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
     text-decoration: none;
     color: black;
     text-shadow: 0 0 10px rgba(55,55,55,0.5);
