@@ -92,11 +92,11 @@ body {
     background-position: center;
     background-position: 80%;
     background-attachment: fixed;
-    height: 200px;
+    height: 800px;
     z-index: 1;
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
+    align-items: center;
     position: relative;
     justify-content: center;
     padding-bottom: 40px;
@@ -116,7 +116,7 @@ body {
     text-align: center;
     position: relative;
     z-index: 3;
-    padding-bottom: 7px;
+    padding-bottom: 6px;
 }
 
 /* -------------------------------------- */
