@@ -17,12 +17,15 @@ header {
     position: -webkit-sticky;
     justify-content: space-between;
     height: 125px;
+    position: sticky;
 }
 
 header h1 {
     font-size: 50px;
-    text-shadow: 0 0 10px rgba(58, 57, 57, 0.5);
+    text-shadow: 0 0 10px rgba(219, 219, 219, 0.5);
     font-weight: bold;
+    padding: 30px;
+    color: black;
 }
 
 /* header nav links - contains hover links that increase in size */
@@ -47,7 +50,7 @@ header nav ul li {
 header nav ul li a {
     font-weight: lighter;
     font-size: 25px;
-    padding: 10px 25px 4.5px;
+    padding: 10px 25px 6px;
     text-decoration: none;
     color: black;
     text-shadow: 0 0 10px rgba(55,55,55,0.5);
@@ -57,53 +60,378 @@ header nav ul li a {
 
 header nav ul li a:hover {
     font-size: 35px;
-    transition: 0.5s;
+    transition: 0.3s;
     border-bottom: 4px solid black;
-}
-
-header nav ul li a:hover head nav ul li a::after {
-    opacity: 1;
-}
-
-header nav ul li a::after {
-    content: "";
-    height: 100%;
-    width: 100%;
-    font-size: 20px;
-    opacity: 0;
     color: white;
 }
 
-/*       BODY      */
 
 
-/* NATHANS "aboutme work contact" CONTAINER */
+/* -------------------------------------- */
+/*               BODY                     */
+/* -------------------------------------- */
 
-.grid-about-me-container {
-    background: lightgray;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr;
-    background: rgb(224, 224, 224);
-    padding: 50px;
-    border: 2px solid black;
+body {
+
+
 }
+
+/* -------------------------------------- */
+/*             BODY CONTAINER             */
+/* -------------------------------------- */
+
+.spacer {
+    background-image: url("./assets/images/white-abstract.jpg");
+    background-size: cover;
+    background-position: center;
+    background-position: 80%;
+    background-attachment: fixed;
+    height: 200px;
+    z-index: 1;
+}
+
+.welcome-message {
+    text-align: right;
+    font-size: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 135px 15px 15px;
+}
+
+/* -------------------------------------- */
+/*             GRID CONTAINER             */
+/* -------------------------------------- */
 
 .grid-wrapper {
     display: flex;
-    width: 100%;
+    flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
 }
 
-.about-me.first-column {
-    grid-column: 1;
-    grid-row: 1;
+.first-column {
+    font-size: 35px;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-weight: bold;
+    border-left: 3px solid black;
+    padding: 20px;
+    margin: 20px;
+    text-align: right;
+}
+
+.second-column {
+    font-size: 20px;
+    padding: 20px;
+}
+
+.grid-template {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: repreat(1, 1fr);
+    background: rgb(245, 245, 245);
+    width: 100%;
+    position: relative;
+}
+
+/*--------------------*/
+/*   ABOUT ME GRID    */
+/*--------------------*/
+
+.about-me-container h2 {
+    position: relative;
+    z-index: 10;
+    color: black;
+    font-size: 35px;
+}
+
+.about-details-container h3 {
+    position: relative;
+    z-index: 5;
+    color: black;
+    font-size: 20px;
+    opacity: 0;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.about-details-container::after {
+    content: "";
+    height: 100%;
+    width: 82%;
+    background: rgb(248, 207, 214);
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: 1s;
+}
+
+.about-me-grid:hover .about-details-container::after {
+    opacity: .3;
+}
+
+.about-me-grid:hover .about-details-container h3 {
+    opacity: 1;
+}
+
+/*--------------------*/
+/*   PROJECTS GRID    */
+/*--------------------*/
+
+.project-wrapper {
+    width: 100%;
+    height: 600px;
+    margin: 15px 0 15px 0;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 100%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.projects-container {
+    grid-column: 1 /span 1;
+    grid-row: 1 /span 1;
+}
+
+.projects-container h2 {
+    position: relative;
+    z-index: 1;
+    color: black;
+    font-size: 35px;
+}
+
+.project-details-container::after {
+    content: "";
+    height: 100%;
+    width: 82%;
+    background: rgb(248, 207, 214);
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: 1s;
+}
+
+.projects-grid:hover .project-details-container::after {
+    opacity: .2;
+}
+
+.project-website-grid {
+    grid-column: 2 /span 1;
+    grid-row: 1 / span 1;
+    margin: 15px 15px 15px 0;
+}
+
+.grid-websites {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
+    height: 100%;
+    gap: 15px;
+}
+
+/*---------WEBSITE 1: HOVER----------*/
+
+.website-1 {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    border: 2px solid black;
+    position: relative;
+    z-index: 1;
+    opacity: 0.5;
+}
+.website-1:hover {
+    opacity: 1;
+    transition: .7s;
+}
+
+/*---------WEBSITE 2: HOVER----------*/
+
+.website-2 {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+    border: 2px solid black;
+    position: relative;
+    z-index: 1;    
+    opacity: 0.5;
+}
+
+.website-2:hover {
+    opacity: 1;
+    transition: .7s;
+}
+
+/*---------WEBSITE 3: HOVER----------*/
+
+.website-3 {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+    border: 2px solid black;
+    position: relative;
+    z-index: 1;
+    opacity: 0.5;   
+}
+
+.website-3:hover {
+    opacity: 1;
+    transition: .7s;
+}
+
+/*---------THUMBNAIL 1: PROJECTS SCREENSHOT----------*/
+
+.thumbnail-1 iframe {
+    width: 1370px;
+    height: 930px;
+}
+
+.thumbnail-1 {
+    position: relative;
+    -moz-transform: scale(0.4);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0.4);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.4);
+    -webkit-transform-origin: 0 0;
+    z-index: 1;
+  }
+
+/*---------THUMBNAIL 2----------*/
+
+.thumbnail-2 iframe {
+    width: 1330px;
+    height: 870px;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.thumbnail-2 {
+    position: relative;
+    -moz-transform: scale(0.2);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0.2);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.2);
+    -webkit-transform-origin: 0 0;
+    z-index: 1;
+  }
+
+/*---------THUMBNAIL 3----------*/
+
+.thumbnail-3 iframe {
+    width: 1330px;
+    height: 887px;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.thumbnail-3 {
+    position: relative;
+    -moz-transform: scale(0.2);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0.2);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.2);
+    -webkit-transform-origin: 0 0;
+    z-index: 1;
+  }
+
+/*---------WEBSITE LINKS STYLE---------*/
+
+.website-link-1 a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9000;
+    opacity: .2;
+    background-size: cover;
+}  
+
+.website-link-2 a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9000;
+    opacity: .2;
+    background-size: cover;
+}  
+
+.website-link-3 a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9000;
+    opacity: .2;
+    background-size: cover;
+}    
+
+/*--------------------*/
+/*   CONTACTS GRID    */
+/*--------------------*/
+
+.contact-container h2 {
+    position: relative;
+    z-index: 10;
+    color: black;
+    font-size: 35px;
+}
+
+.contact-details-container h3 {
+    position: relative;
+    z-index: 5;
+    color: black;
+    font-size: 20px;
+    opacity: 0;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.contact-details-container::after {
+    content: "";
+    height: 100%;
+    width: 82%;
+    background: rgb(248, 207, 214);
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: 1s;
+}
+
+.contact-grid:hover .contact-details-container::after {
+    opacity: .3;
+}
+
+.contact-grid:hover .contact-details-container h3 {
+    opacity: 1;
 }
 
 
 
-/* MEDIA QUERY */
+
+/* -------------------------------------- */
+/*               MEDIA QUERY              */
+/* -------------------------------------- */
 
 @media screen and (max-width: 980px) {
     header {
@@ -114,16 +442,75 @@ header nav ul li a::after {
     header h1 {
         text-align: center;
         width: 100%;
+        padding-top: 5px;
+        padding-bottom: 1px;
     }
 
     header nav {
-        margin-top: 10px
+        margin-top: 1px
     }
 
+    header {
+        position: sticky;
+    }
+
+    header nav ul li a:hover {
+        font-size: 25px;
+    }
+
+    .website-3 {
+        grid-column: 2 / span 1;
+        grid-row: 3 / span 1;
+        border: 2px solid black;
+        position: relative;
+        z-index: 5;
+        display: flex;
+        flex-wrap: wrap;    
+    }
+
+    .first-column {
+        font-size: 2vw;
+    }
+
+    .grid-websites {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        width: 100%;
+        height: 100%;
+        gap: 5px;
+    }
+
+}
+
 @media screen and (max-width: 768px) {
+    header nav {
+        margin-top: 5px;
+        text-align: center;
+    }
+
+    header nav ul li a {
+        padding: 5px 5px;
+    }
+
+    header {
+        position: sticky;
+    }
+
+    header nav ul li a:hover {
+        font-size: 25px;
+    }
 
 }
 
 @media screen and (max-width: 575px) {
+    
+    header {
+    position: sticky;
+    }
+
+    header nav ul li a:hover {
+        font-size: 25px;
+    }
 
 }
