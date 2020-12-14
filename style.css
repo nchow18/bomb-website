@@ -695,6 +695,10 @@ body {
         color: black;
     }
 
+    .sticky-stop {
+        scroll-margin-top: 35vw;
+    }
+
 }
 
 /*----------- MEDIA SCREEN 768 ---------*/
