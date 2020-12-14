@@ -460,7 +460,6 @@ body {
     grid-row: 1 span 1;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
 }
 
 .contact-info nav ul {
@@ -538,27 +537,6 @@ body {
     font-size: 15px;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-/* -------------------------------------- */
-/*           DEVELOPER IMAGE              */
-/* -------------------------------------- */
-
-.developer-image {
-    background-image: URL("./assets/images/nathan.jpg");
-    background-size: 50%;
-    width: 100%;
-}
->>>>>>> f7900b6bbbb67375f439a699e3355b8581d4755d
-
->>>>>>> bca683a503759e9515c3e149b70f31036429ffa6
-=======
-
->>>>>>> ecabbee7d57705e98d10e9cdd4c0c9a0f5c0935f
 /* -------------------------------------- */
 /*               MEDIA QUERY              */
 /* -------------------------------------- */
@@ -736,6 +714,14 @@ body {
 
     .contact-details-container {
         justify-content: center;
+    }
+
+    .contact-section:hover {
+        box-shadow: 0 0 15px black;
+        transition: 1s;
+        width: 93%;
+        height: 93%;
+        margin: 15px; 
     }
 
 }
