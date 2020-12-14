@@ -19,17 +19,24 @@ header {
     justify-content: space-between;
     height: 125px;
     position: sticky;
+<<<<<<< HEAD
 }
 
 .sticky-stop {
     scroll-margin-top: 125px;
+=======
+>>>>>>> feature/grid
 }
 
 header h1 {
     font-size: 50px;
     text-shadow: 0 0 10px rgba(219, 219, 219, 0.5);
     font-weight: bold;
+<<<<<<< HEAD
     padding: 5px;
+=======
+    padding: 30px;
+>>>>>>> feature/grid
     color: black;
 }
 
@@ -55,8 +62,12 @@ header nav ul li {
 header nav ul li a {
     font-weight: lighter;
     font-size: 25px;
+<<<<<<< HEAD
     margin-left: 20px;
     margin-right: 20px;
+=======
+    padding: 10px 25px 6px;
+>>>>>>> feature/grid
     text-decoration: none;
     color: black;
     text-shadow: 0 0 10px rgba(55,55,55,0.5);
@@ -66,7 +77,11 @@ header nav ul li a {
 /* animate, slide from right to left */
 
 header nav ul li a:hover {
+<<<<<<< HEAD
     font-size: 28px;
+=======
+    font-size: 35px;
+>>>>>>> feature/grid
     transition: 0.3s;
     border-bottom: 4px solid black;
     color: white;
@@ -79,7 +94,12 @@ header nav ul li a:hover {
 /* -------------------------------------- */
 
 body {
+<<<<<<< HEAD
     background-color: rgb(238, 238, 238);
+=======
+
+
+>>>>>>> feature/grid
 }
 
 /* -------------------------------------- */
@@ -92,6 +112,7 @@ body {
     background-position: center;
     background-position: 80%;
     background-attachment: fixed;
+<<<<<<< HEAD
     height: 800px;
     z-index: 1;
     display: flex;
@@ -117,6 +138,19 @@ body {
     position: relative;
     z-index: 3;
     padding-bottom: 6px;
+=======
+    height: 200px;
+    z-index: 1;
+}
+
+.welcome-message {
+    text-align: right;
+    font-size: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 135px 15px 15px;
+>>>>>>> feature/grid
 }
 
 /* -------------------------------------- */
@@ -131,11 +165,19 @@ body {
 }
 
 .first-column {
+<<<<<<< HEAD
+=======
+    font-size: 35px;
+>>>>>>> feature/grid
     writing-mode: vertical-lr;
     transform: rotate(180deg);
     font-weight: bold;
     border-left: 3px solid black;
+<<<<<<< HEAD
     padding: 1px;
+=======
+    padding: 20px;
+>>>>>>> feature/grid
     margin: 20px;
     text-align: right;
 }
@@ -150,6 +192,7 @@ body {
     grid-template-columns: 20% 80%;
     grid-template-rows: repreat(1, 1fr);
     background: rgb(245, 245, 245);
+<<<<<<< HEAD
     width: 100%;
     position: relative;
 }
@@ -194,6 +237,15 @@ body {
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
 }
+=======
+    width: 100%;
+    position: relative;
+}
+
+/*--------------------*/
+/*   ABOUT ME GRID    */
+/*--------------------*/
+>>>>>>> feature/grid
 
 .about-me-container h2 {
     position: relative;
@@ -207,6 +259,7 @@ body {
     z-index: 5;
     color: black;
     font-size: 20px;
+<<<<<<< HEAD
     opacity: 1;
     overflow: hidden;
     transition: .4s;
@@ -232,6 +285,41 @@ body {
     width: 99%;
     height: 99%;
     margin: 15px; 
+=======
+    opacity: 0;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.about-details-container::after {
+    content: "";
+    height: 100%;
+    width: 82%;
+    background: rgb(248, 207, 214);
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: 1s;
+}
+
+.about-me-grid:hover .about-details-container::after {
+    opacity: .3;
+}
+
+.about-me-grid:hover .about-details-container h3 {
+    opacity: 1;
+}
+
+/*--------------------*/
+/*   PROJECTS GRID    */
+/*--------------------*/
+
+.project-wrapper {
+    width: 100%;
+    height: 600px;
+    margin: 15px 0 15px 0;
+>>>>>>> feature/grid
 }
 
 .projects-grid {
@@ -241,6 +329,10 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
+<<<<<<< HEAD
+=======
+    flex-wrap: wrap;
+>>>>>>> feature/grid
 }
 
 .projects-container {
@@ -250,7 +342,11 @@ body {
 
 .projects-container h2 {
     position: relative;
+<<<<<<< HEAD
     z-index: 1;
+=======
+    z-index: 10;
+>>>>>>> feature/grid
     color: black;
     font-size: 35px;
 }
@@ -284,6 +380,7 @@ body {
     width: 100%;
     height: 100%;
     gap: 15px;
+<<<<<<< HEAD
 }
 
 /*---------WEBSITE GRIDS----------*/
@@ -296,10 +393,31 @@ body {
     z-index: 1;
     box-shadow: 0 0 10px black;
 }
+=======
+}
+
+/*---------WEBSITE 1: HOVER----------*/
+
+.website-1 {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    border: 2px solid black;
+    position: relative;
+    z-index: 5;
+    opacity: 0.5;
+}
+.website-1:hover {
+    opacity: 1;
+    transition: .7s;
+}
+
+/*---------WEBSITE 2: HOVER----------*/
+>>>>>>> feature/grid
 
 .website-2 {
     grid-column: 1 / span 1;
     grid-row: 3 / span 1;
+<<<<<<< HEAD
     border: 3px solid rgb(141, 141, 141);
     position: relative;
     z-index: 1;
@@ -400,11 +518,79 @@ body {
     opacity: .2;
     background-size: cover;
 }    
+=======
+    border: 2px solid black;
+    position: relative;
+    z-index: 5;    
+    opacity: 0.5;
+}
+
+.website-2:hover {
+    opacity: 1;
+    transition: .7s;
+}
+
+/*---------WEBSITE 3: HOVER----------*/
+
+.website-3 {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+    border: 2px solid black;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-wrap: wrap;    
+}
+
+.website-3:hover {
+    opacity: .3;
+    background: lightblue;
+    transition: .7s;
+}
+
+/*---------THUMBNAIL : PROJECTS SCREENSHOT----------*/
+
+.thumbnail-1 iframe {
+    width: 1370px;
+    height: 930px;
+}
+
+.thumbnail-1 {
+    position: relative;
+    -moz-transform: scale(0.4);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0.4);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.4);
+    -webkit-transform-origin: 0 0;
+  }
+
+.thumbnail-2 iframe {
+    width: 1330px;
+    height: 870px;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+}
+
+.thumbnail-2 {
+    position: relative;
+    -moz-transform: scale(0.2);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0.2);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.2);
+    -webkit-transform-origin: 0 0;
+  }
+
+>>>>>>> feature/grid
 
 /*--------------------*/
 /*   CONTACTS GRID    */
 /*--------------------*/
 
+<<<<<<< HEAD
 /*---------------- CONTACT NAV --------------*/
 
 .contact-wrapper {
@@ -424,6 +610,43 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
+=======
+.contact-container h2 {
+    position: relative;
+    z-index: 10;
+    color: black;
+    font-size: 35px;
+}
+
+.contact-details-container h3 {
+    position: relative;
+    z-index: 5;
+    color: black;
+    font-size: 20px;
+    opacity: 0;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.contact-details-container::after {
+    content: "";
+    height: 100%;
+    width: 82%;
+    background: rgb(248, 207, 214);
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: 1s;
+}
+
+.contact-grid:hover .contact-details-container::after {
+    opacity: .3;
+}
+
+.contact-grid:hover .contact-details-container h3 {
+    opacity: 1;
+>>>>>>> feature/grid
 }
 
 .contact-section:hover {
@@ -443,6 +666,7 @@ body {
     z-index: 10;
 }
 
+<<<<<<< HEAD
 .contact-container {
     grid-column: 1/ span 1;
     grid-row: 1/span 1;
@@ -523,13 +747,18 @@ body {
     font-size: 15px;
 }
 
+=======
+>>>>>>> feature/grid
 
 /* -------------------------------------- */
 /*               MEDIA QUERY              */
 /* -------------------------------------- */
+<<<<<<< HEAD
 
 
 /*----------- MEDIA SCREEN 980 ---------*/
+=======
+>>>>>>> feature/grid
 
 @media screen and (max-width: 980px) {
     header {
@@ -550,6 +779,7 @@ body {
 
     header {
         position: sticky;
+<<<<<<< HEAD
     }
 
     header nav ul {
@@ -584,6 +814,28 @@ body {
         padding: 10px;
     }
 
+=======
+    }
+
+    header nav ul li a:hover {
+        font-size: 25px;
+    }
+
+    .website-3 {
+        grid-column: 2 / span 1;
+        grid-row: 3 / span 1;
+        border: 2px solid black;
+        position: relative;
+        z-index: 5;
+        display: flex;
+        flex-wrap: wrap;    
+    }
+
+    .first-column {
+        font-size: 2vw;
+    }
+
+>>>>>>> feature/grid
     .grid-websites {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -593,6 +845,7 @@ body {
         gap: 5px;
     }
 
+<<<<<<< HEAD
     /* REMOVE HOVER ON GRID */    
 
    .thumbnail-1 .thumbnail-2 .thumbnail-3 {
@@ -703,6 +956,10 @@ body {
 
 /*----------- MEDIA SCREEN 768 ---------*/
 
+=======
+}
+
+>>>>>>> feature/grid
 @media screen and (max-width: 768px) {
     header nav {
         margin-top: 5px;
