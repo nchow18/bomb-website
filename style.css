@@ -523,6 +523,15 @@ body {
     font-size: 15px;
 }
 
+/* -------------------------------------- */
+/*           DEVELOPER IMAGE              */
+/* -------------------------------------- */
+
+.developer-image {
+    background-image: URL("./assets/images/nathan.jpg");
+    background-size: 50%;
+    width: 100%;
+}
 
 /* -------------------------------------- */
 /*               MEDIA QUERY              */
