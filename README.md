@@ -4,5 +4,5 @@
 
 ### this was created with a design of being simple and concise
 
-## Portfolio Link: https://github.com/nchow18/bomb-website/blob/main/index.html
+## Portfolio Link: https://github.com/nchow18/bomb-website
 ## style Sheet: https://github.com/nchow18/bomb-website/blob/main/style.css
