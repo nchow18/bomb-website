@@ -9,7 +9,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     z-index: 9999;
-    background-image: url("./assets/images/white-abstract.jpg");
+    background-color: rgb(73, 73, 73);
     background-size: cover;
     background-position: center;
     top: 0;
@@ -19,6 +19,7 @@ header {
     justify-content: space-between;
     height: 125px;
     position: sticky;
+    
 }
 
 .sticky-stop {
@@ -27,10 +28,10 @@ header {
 
 header h1 {
     font-size: 50px;
-    text-shadow: 0 0 10px rgba(219, 219, 219, 0.5);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     font-weight: bold;
-    padding: 5px;
-    color: black;
+    padding: 15px;
+    color: white;
 }
 
 /* header nav links - contains hover links that increase in size */
@@ -58,17 +59,16 @@ header nav ul li a {
     margin-left: 20px;
     margin-right: 20px;
     text-decoration: none;
-    color: black;
-    text-shadow: 0 0 10px rgba(55,55,55,0.5);
+    color: rgb(190, 190, 190);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     padding-bottom: 1px;
 }
 
 /* animate, slide from right to left */
 
 header nav ul li a:hover {
-    font-size: 28px;
     transition: 0.3s;
-    border-bottom: 4px solid black;
+    border-bottom: 4px solid white;
     color: white;
 }
 
@@ -103,13 +103,15 @@ body {
 }
 
 .welcome-box {
-    background-color: rgb(156, 156, 156);
+    background-color: rgb(83, 83, 83);
     opacity: .8;
     box-shadow: 0 0 10px black;
     position: absolute;
     z-index: 2;
     height: 50px;
     width: 350px;
+    filter: blur(2px);
+    border-radius: 10px;
 }
 
 .welcome-text h1 {
@@ -117,6 +119,8 @@ body {
     position: relative;
     z-index: 3;
     padding-bottom: 6px;
+    color: rgb(226, 226, 226);
+    text-shadow: 0 0 5px black;
 }
 
 /* -------------------------------------- */
@@ -173,7 +177,8 @@ body {
     transition: 1s;
     width: 99%;
     height: 99%;
-    margin: 15px; 
+    margin: 15px;
+    border-radius: 15px; 
 }
 
 .about-me-grid {
@@ -231,7 +236,8 @@ body {
     transition: 1s;
     width: 99%;
     height: 99%;
-    margin: 15px; 
+    margin: 15px;
+    border-radius: 15px; 
 }
 
 .projects-grid {
@@ -288,10 +294,13 @@ body {
 
 /*---------WEBSITE GRIDS----------*/
 
+.border-style {
+    border-radius: 15px;
+}
+
 .website-1 {
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
-    border: 3px solid rgb(141, 141, 141);
     position: relative;
     z-index: 1;
     box-shadow: 0 0 10px black;
@@ -300,7 +309,6 @@ body {
 .website-2 {
     grid-column: 1 / span 1;
     grid-row: 3 / span 1;
-    border: 3px solid rgb(141, 141, 141);
     position: relative;
     z-index: 1;
     box-shadow: 0 0 10px black;   
@@ -309,7 +317,6 @@ body {
 .website-3 {
     grid-column: 3 / span 1;
     grid-row: 1 / span 1;
-    border: 3px solid rgb(141, 141, 141);
     position: relative;
     z-index: 1;
     box-shadow: 0 0 10px black;  
@@ -431,7 +438,8 @@ body {
     transition: 1s;
     width: 99%;
     height: 99%;
-    margin: 15px; 
+    margin: 15px;
+    border-radius: 15px; 
 }
 
 .contact-info {
@@ -479,11 +487,17 @@ body {
 .contact-info nav ul li a {
     font-weight: lighter;
     font-size: 20px;
-    border-bottom: 2px solid black;
-    margin: 15px;
+    margin: 10px;
     padding-bottom: 5px;
     text-decoration: none;
     color: black;
+}
+
+.contact-info nav ul li a:hover {
+    color: white;
+    background-color: black;
+    padding: 5px;
+    font-size: 18px;
 }
 
 /*--------------------*/
@@ -576,7 +590,7 @@ body {
         margin-left: 5px;
         margin-right: 5px;
         text-decoration: none;
-        color: black;
+        color: rgb(224, 224, 224);
         text-shadow: 0 0 10px rgba(55,55,55,0.5);
         margin-bottom: 25px;
     }
@@ -645,7 +659,6 @@ body {
         height: 200px;
         grid-row: 1;
         grid-column: 1 / span 2;
-        border: 2px solid black;
         position: relative;
         z-index: 1;
     }
@@ -667,7 +680,6 @@ body {
         height: 200px;
         grid-row: 2;
         grid-column: 1 / span 2;
-        border: 2px solid black;
         position: relative;
         z-index: 1;
     }
@@ -689,7 +701,6 @@ body {
         height: 200px;
         grid-row: 3;
         grid-column: 1 / span 2;
-        border: 2px solid black;
         position: relative;
         z-index: 1;
     }
@@ -722,6 +733,32 @@ body {
         width: 93%;
         height: 93%;
         margin: 15px; 
+    }
+
+    .about-me-grid {
+        box-shadow: 0 0 15px black;
+        width: 99%;
+        height: 99%;
+        margin: 15px;
+        border-radius: 15px;
+    }
+
+    .projects-grid {
+        box-shadow: 0 0 15px black;
+        transition: 1s;
+        width: 99%;
+        height: 99%;
+        margin: 15px;
+        border-radius: 15px; 
+    }
+
+    .contact-section {
+        box-shadow: 0 0 15px black;
+        transition: 1s;
+        width: 99%;
+        height: 99%;
+        margin: 15px;
+        border-radius: 15px; 
     }
 
 }
