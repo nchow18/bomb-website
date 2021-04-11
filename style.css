@@ -3,19 +3,37 @@ a {
     color: white;
 }
 
-.background-img {
-    background: url('./assets/images/background.jpg');
-    object-fit: contain;
-    top: 0;
-    left: 0;
-    position: absolute;
-    height: 100%;
-    width: 100%;
+body {
+    background-color: pink;
+
 }
 
-head {
-    height: 10rem;
+.background-img {
+    background-image: url('./assets/images/background.jpg');
+    top: 5;
+    left: 0;
+    position: absolute;
     width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    z-index: 1;
+    min-height: 1200px
+}
+
+
+.top-bar {
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    background-color: black;
 }
 
 .nathan-title-container {
@@ -28,14 +46,9 @@ head {
     font-size: 2rem;
 }
 
-.nav-bar {
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-
 .nav-flex {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
 }
 
@@ -47,65 +60,61 @@ head {
     margin-left: 1rem;
 }
 
+li {
+    list-style: none;
+}
+
+.center-item {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    top: 5rem;
+    left: 0;
+    z-index: 5;
+}
+
 .grid-container {
-    display: grid;
-    grid-template-rows: auto auto auto;
-    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    max-width: 65rem;
+    width: 90%;
 }
 
 /* ===========ABOUT ME=============*/
 
-.grid-row-1 {
-    grid-row: 1;
-    display: grid;
-    grid-template-columns: 20% 80%;
+.flex-row {
+    display: flex;
+    flex-direction: row;
     min-height: 10rem;
     margin-bottom: 5rem;
+    /* background-color: pink; */
 }
 
-.grid-row-2 {
-    grid-row: 2;
-    display: grid;
-    grid-template-columns: 20% 80%;
-    min-height: 10rem;
-    margin-bottom: 5rem;
-}
-
-.grid-row-3 {
-    grid-row: 3;
-    display: grid;
-    grid-template-columns: 20% 80%;
-    min-height: 10rem;
-    margin-bottom: 5rem;
+.about-me-details {
+    margin-left: 3rem;
 }
 
 .column-1 {
-    grid-column: 1 / span 1;
     padding: 2rem;
-    position: relative;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .column-2 {
-    grid-column: 2 / span 1;
-    padding: 2rem;
     flex-wrap: wrap;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .rotate-title {
     transform: rotate(-90deg);
+    text-align: center;
 }
 
 /* ===========PROJECTS=============*/
 
 .project-img {
-    height: 15rem;
-    width: 25rem;
+    height: 10rem;
+    width: 16rem;
 }
 
 .project-container {
@@ -115,16 +124,47 @@ head {
     box-shadow: 10px 10px 25px rgb(0,0,0,0.75);
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    margin: 1rem;
+    margin: 1rem 1rem 0 1rem;
 }
 
 .project-title {
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+    padding: .5rem;
     text-align: center;
     background-color: rgb(52, 52, 52);
-    width: 100%;
+    width: 14.5rem;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    width: 15rem;
+}
+
+/* ===========CONTACT=============*/
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 2rem;
+    align-items: center;
+}
+
+.nathan-img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 1125px) {
+    .background-img {
+        min-height: 1500px;
+    }
+}
+
+@media screen and (max-width: 805px) {
+    .background-img {
+        min-height: 2200px;
+        width: 500px
+    }
 }
