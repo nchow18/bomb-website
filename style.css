@@ -12,14 +12,13 @@ body {
     background-image: url('./assets/images/background.jpg');
     top: 5;
     left: 0;
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: black;
     z-index: 1;
-    min-height: 1200px
 }
 
 
@@ -156,7 +155,7 @@ li {
     border-radius: 50%;
 }
 
-@media screen and (max-width: 1125px) {
+/* @media screen and (max-width: 1125px) {
     .background-img {
         min-height: 1500px;
     }
@@ -167,4 +166,4 @@ li {
         min-height: 2200px;
         width: 830px;
     }
-}
+} */
