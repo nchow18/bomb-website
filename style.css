@@ -165,6 +165,6 @@ li {
 @media screen and (max-width: 810px) {
     .background-img {
         min-height: 2200px;
-        width: 100%;
+        width: 830px;
     }
 }
