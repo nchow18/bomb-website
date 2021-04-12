@@ -5,12 +5,11 @@ a {
 
 body {
     background-color: pink;
-
 }
 
 .background-img {
     background-image: url('./assets/images/background.jpg');
-    top: 5;
+    top: 0;
     left: 0;
     position: fixed;
     width: 100%;
@@ -21,6 +20,46 @@ body {
     z-index: 1;
 }
 
+/* ===========INDEX.HTML=============*/
+
+.home-index {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 15;
+}
+
+.index-text {
+    font-size: 5rem;
+    font-family: 'Sacramento', cursive;
+}
+
+.home-links {
+    text-align: center;
+    font-size: 2rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.index-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.index-link {
+    text-decoration: none;
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.index-link:hover {
+    opacity: .2;
+}
 
 .top-bar {
     height: 5rem;
@@ -43,6 +82,7 @@ body {
 .nathan-title {
     color: white;
     font-size: 2rem;
+    text-decoration: none;
 }
 
 .nav-flex {
