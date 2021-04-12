@@ -222,6 +222,9 @@ li {
     padding-top: 2rem;
     padding-bottom: 2rem;
     border-radius: 15px;
+    padding-right: 3rem;
+    line-height: 2.5rem;
+    text-align: center;
 }
 
 .rotate-title {
