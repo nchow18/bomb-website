@@ -282,7 +282,7 @@ li {
     margin-left: auto;
     margin-right: auto;
     width: 18rem;
-    color: black;
+    color: white;
     text-align: center;
 }
 
@@ -303,7 +303,7 @@ li {
   .card {
     height: 14rem;
     width: 18rem;
-    background-color: white;
+    background-color: rgba(26, 26, 26, 0.6);
     position: relative;
     transform-origin: left;
     transform-style: preserve-3d;
@@ -340,7 +340,7 @@ li {
   }
 
   .project-content-text {
-      color: black;
+      color: white;
       text-align: center;
   }
 
