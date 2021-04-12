@@ -268,7 +268,7 @@ li {
     transform-origin: left;
     transform-style: preserve-3d;
     box-shadow: 10px 20px 40px rgb(0,0,0,0.35);
-    z-index: 1;
+    z-index: 3;
     transition: 1s;
     top: 2rem;
     left: 0;
