@@ -158,10 +158,11 @@ li {
 .grid-container {
     display: flex;
     flex-direction: column;
+    width: auto;
     max-width: 54rem;
-    margin: 5rem;
-    justify-content: center;
+    align-items: center;
     min-width: 350px;
+    margin-top: 4rem;
 }
 
 /* ===========ABOUT ME=============*/
@@ -280,6 +281,10 @@ li {
 
 @media screen and (max-width: 740px) {
     .grid-container {
+        width: 18rem;
+    }
+
+    .flex-row {
         width: 18rem;
     }
 }
