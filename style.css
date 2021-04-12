@@ -19,6 +19,16 @@ body {
     max-width: 775px;
 }
 
+#center-card {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 20;
+}
+
 #background-img {
     background-image: url('./assets/images/background.jpg');
     top: 0;
@@ -63,6 +73,13 @@ body {
 }
 
 #center-vh:hover ~ #pop-background {
+    background-size: cover;
+    z-index: 3;
+    transition: 2s;
+    opacity: 1;
+}
+
+#center-card:hover ~ #pop-background {
     background-size: cover;
     z-index: 3;
     transition: 2s;
