@@ -369,18 +369,11 @@ li {
 
 
 @media screen and (max-width: 1125px) {
-    .grid-container {
-        width: 36rem;
-    }
 }
 
 @media screen and (max-width: 740px) {
     .grid-container {
-        width: 18rem;
-    }
-
-    .flex-row {
-        width: 18rem;
+        width: 90%;
     }
 }
 
