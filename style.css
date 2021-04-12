@@ -1,6 +1,7 @@
 a {
     font-family: Arial, Geneva, Helvetica, sans-serif;
     color: white;
+    text-decoration: none;
 }
 
 body {
@@ -156,6 +157,7 @@ li {
 .center-item {
     display: flex;
     justify-content: center;
+    align-items: center;
     position: absolute;
     width: 100%;
     top: 5rem;
@@ -166,21 +168,13 @@ li {
 .grid-container {
     display: flex;
     flex-direction: column;
-    width: auto;
-    max-width: 54rem;
+    width: 90%;
     align-items: center;
-    min-width: 350px;
     margin-top: 4rem;
+    max-width: 1000px;
 }
 
 /* ===========ABOUT ME=============*/
-
-.flex-row {
-    display: flex;
-    flex-direction: row;
-    min-height: 10rem;
-    margin-bottom: 5rem;
-}
 
 .about-me-details {
     margin-left: 3rem;
@@ -192,8 +186,11 @@ li {
 }
 
 .column-2 {
-    flex-wrap: wrap;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: auto;
 }
 
 .rotate-title {
@@ -220,17 +217,71 @@ li {
 
 .project-title {
     padding: .5rem;
-    background-color: rgb(52, 52, 52);
-    width: 14.5rem;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
     font-weight: bold;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 15rem;
-    color: white;
+    width: 18rem;
+    color: black;
+    text-align: center;
 }
+
+.imgBox {
+    height: 12rem;
+    width: 18rem;
+    background-color: white;
+    position: absolute;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    box-shadow: 10px 20px 40px rgb(0,0,0,0.35);
+    z-index: 1;
+    transition: 1s;
+    top: 2rem;
+    left: 0;
+  }
+  
+  .card {
+    height: 14rem;
+    width: 18rem;
+    background-color: white;
+    position: relative;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    box-shadow: 10px 20px 40px rgb(0,0,0,0.35);
+    z-index: 1;
+    transform: perspective(1000px);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin: 1rem;
+  }
+  
+  .card:hover .imgBox {
+    transform: rotateY(-180deg);
+  }
+  
+  .imgBox img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+  }
+
+  .project-content {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1rem;
+  }
+
+  .project-content-text {
+      color: black;
+      text-align: center;
+  }
 
 /* ===========CONTACT=============*/
 
