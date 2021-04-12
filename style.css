@@ -27,7 +27,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: black;
-    z-index: 1;
+    z-index: 2;
 }
 
 /* ===========INDEX.HTML=============*/
@@ -37,13 +37,34 @@ body {
     font-family: 'Sacramento', cursive;
 }
 
-.home-links {
+#home-links {
     text-align: center;
     font-size: 2rem;
     height: 20rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+#pop-background {
+    background-image: url('./assets/images/background1.jpg');
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 0;
+    background-color: black;
+    z-index: 1;
+    opacity: 0;
+}
+
+#center-vh:hover ~ #pop-background {
+    background-size: cover;
+    z-index: 3;
+    transition: 3s;
+    opacity: 1;
 }
 
 .index-flex {
@@ -213,12 +234,7 @@ li {
 #card-profile:hover {
     background-color: rgb(249, 249, 167);
     opacity: .2;
-}
-
-#center-vh:hover ~ #background-img {
-    background-image: url('./assets/images/background1.jpg');
-    transition: .1s;
-    opacity: 1;
+    transition: 2s;
 }
 
 .contact-link {
