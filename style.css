@@ -314,7 +314,8 @@ li {
 }
 
 .project-title {
-    padding: .5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
     font-weight: bold;
     display: block;
     margin-left: auto;
