@@ -355,6 +355,7 @@ li {
   
   .card:hover .imgBox {
     transform: rotateY(-180deg);
+    opacity: .1;
   }
   
   .imgBox img {
