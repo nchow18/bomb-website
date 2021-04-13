@@ -177,7 +177,7 @@ body {
 #center-card:hover ~ #pop-background2 {
     background-size: cover;
     z-index: 3;
-    transition: 2s;
+    transition: 3s;
     opacity: 1;
     filter: blur(0px);
     -webkit-filter: blur(0px);
